@@ -1,0 +1,42 @@
+{
+  "dataset":{
+    "name":"facescrub",
+    "img_path":"facescrub/imgs",
+    "train_file":"facescrub/train_466.txt",
+    "test_file":"facescrub/test_466.txt",
+    "model_name":"SimpleCNN",
+    "mode":"reg",
+    "target_name":"SimpleCNN",
+    "target_path":"./target_models/SimpleCNN_reg.tar",
+    "attack_name":"Inversion",
+    "attack_mode":"reg",
+    "batch_size":1,
+    "n_classes":530,
+    "gpus":"0"
+  },
+  "SimpleCNN":{
+    "epochs":100,
+    "learning_rate":1e-2,
+    "vib_lr":1e-2,
+    "dp_lr":5e-3,
+    "ndf":128,
+    "beta":1e-3,
+    "noise_multiplier":0.2,
+    "nc":1,
+    "momentum":0.9,
+    "weight_decay":1e-4
+  },
+  "VGG16":{
+    "epochs":30,
+    "learning_rate":1e-2,
+    "momentum":0.9,
+    "weight_decay":1e-4
+  },
+  "Inversion":{
+    "epochs":50,
+    "learning_rate":2e-3,
+    "ndf":128,
+    "nc":1
+  }
+}
+
