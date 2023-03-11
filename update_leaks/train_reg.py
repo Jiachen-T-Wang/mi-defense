@@ -83,7 +83,7 @@ if __name__ == "__main__":
     
     for i in range(n_epochs):
         target_acc = train(net_target, D_t_loader, test_loader, opt_target, loss, i)
-        shadow_acc = train(net_shadow, D_s_t_loader, test_loader, opt_shadow, loss, i, beta=beta)
+        shadow_acc = train(net_shadow, D_s_t_loader, test_loader, opt_shadow, loss, i)
         train_ece, test_ece = eval_ece(net_target, D_t_loader), eval_ece(net_target, test_loader)
         print("Train ECE:{:.2f}\tTest ECE:{:.2f}".format(train_ece, test_ece))
         attack_acc = work(net_target, net_shadow)
