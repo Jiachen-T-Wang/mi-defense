@@ -9,4 +9,12 @@ torch==1.0
 `python train_inv.py` used to train MI attack models.
 `python train_vib.py` and `python train_dp` are used to train MID and DP models, respectively. 
 
-For Facescrub dataset, we provide a very small subset for it. To downlaod the full dataset, please refer to http://vintage.winklerbros.net/facescrub.html.
+For Facescrub dataset, we provide a very small subset for it. To download the full dataset, please refer to http://vintage.winklerbros.net/facescrub.html.
+
+## GMI
+
+`python gmi/target/train_vib.py` and `python gmi/target/train_dp.py` are used to train MID and DP models. `python gmi/attack/attack.py` is used to attack the trained model.
+
+## Update_leaks
+
+`python update_leaks/train_vib.py` and `python update_leaks/train_dp.py` are used to train MID and DP models. `python update_leaks/single_attack.py` is used to perform the attack.
